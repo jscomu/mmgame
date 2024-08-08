@@ -43,10 +43,19 @@ const App: React.FC<{}> = () => {
       //console.log("둘다 값이 있다.")
       if(choice1st.src === choice2rd.src) {
         console.log("선택한 카드는 같은 그림")
+        setCards(prevCards => { //매치된 카드는 matched true로 변경시켜줌
+          return prevCards.map(card => {
+            if(card.src === choice1st.src) {
+              return {...card, matched: true}
+            } else {
+              return card
+            }
+          })
+        })
         resetTurn()
       } else {
         console.log("선택한 카드는 다른 그림")
-        resetTurn()
+        setTimeout(() => resetTurn(), 1000) //틀렸을때 타임아웃 1초
       }
     }
   }, [choice1st, choice2rd])
@@ -65,7 +74,12 @@ const App: React.FC<{}> = () => {
 
       <div className='card-grid'>
         {cards.map(card => (
-          <ComCard key={card.id} card={card} handleChoice={handleChoice}  />
+          <ComCard
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choice1st || card === choice2rd || card.matched}
+          />
         ))}
       </div>
     </div>
