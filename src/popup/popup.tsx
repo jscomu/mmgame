@@ -67,9 +67,11 @@ const App: React.FC<{}> = () => {
     setTurns(prevTurns => prevTurns + 1)
   }
 
+  const numStryle = { color: 'blue', fontSize: '1.2rem' }
+
   return (
     <div>
-      <h1>메모리게임</h1>
+      <h1>메모리게임&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={numStryle}>횟수 : {turns}</span></h1>
       <button onClick={btnShuffle}>시작</button>
 
       <div className='card-grid'>

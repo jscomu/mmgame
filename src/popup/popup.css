@@ -1,6 +1,7 @@
+/*width: 800px, height: 600px로 제한되어 있어서 이 픽셀을 넘어가면 스크롤이 발생한다.*/
 body {
   width: 600px;
-  height: 600px;
+  height: 560px;
   background-color: #cfaeae;
   padding: 10px;
 }
@@ -9,7 +10,7 @@ button {
   background: none;
   font-weight: bold;
   font-size: 1rem;
-  padding: 6px 12px;
+  padding: 6px 22px;
 }
 button:hover {
   background: red;
@@ -17,7 +18,7 @@ button:hover {
 }
 
 .card-grid {
-  margin-top: 40px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
