@@ -25,7 +25,7 @@ const ComCard: React.FC<ComCardProps> = ({card, handleChoice, flipped }) => {
         handleChoice(card)
     }
     return (
-        <div className='card' key={card.id}>
+        <div className='card'>
             <div className={flipped ? "flipped" : ""}>
                 <img className='front' src={card.src} alt='card front' />
                 <img className='back' src='/img/back.png' onClick={clickCard} alt='card back' />
