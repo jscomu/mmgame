@@ -71,7 +71,7 @@ const App: React.FC<{}> = () => {
 
   return (
     <div>
-      <h1>메모리게임&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={numStryle}>횟수 : {turns}</span></h1>
+      <h1>메모리게임&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={numStryle}>Count : {turns}</span></h1>
       <button onClick={btnShuffle}>시작</button>
 
       <div className='card-grid'>
